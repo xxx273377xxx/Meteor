@@ -7,13 +7,15 @@
     {{#if isOwner}}
       <button class="toggle-private">
         {{#if private}}
-          Private
+          нычка
         {{else}}
-          Public
+          общак
         {{/if}}
       </button>
     {{/if}}
  
     <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+	<strong>{{username}}</strong> {{text}}<br><i style="float: right;">{{date}}</i>
+    <p align="justify">{{desc}}</p>
   </li>
 </template>

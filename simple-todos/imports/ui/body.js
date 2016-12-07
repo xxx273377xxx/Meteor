@@ -34,13 +34,17 @@ Template.body.events({
  
     // Get value from form element
     const target = event.target;
-    const text = target.text.value;
+    <input type="text" name="desc" placeholder="Description" />
+    <input type="date" name="date" />
+    <input  type="submit" value="Add a task">
  
     // Insert a task into the collection
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', text, desc, date);
  
     // Clear form
     target.text.value = '';
+	target.desc.value = '';
+    target.date.value = '';
 	
    Tasks.insert({
       text,
