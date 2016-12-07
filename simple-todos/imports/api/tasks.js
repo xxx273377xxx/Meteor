@@ -26,6 +26,10 @@ Meteor.methods({
     if (! this.userId) {
       throw new Meteor.Error('not-authorized');
     }
+	
+ if (!text) {
+    throw new Meteor.Error('not-authorized');
+    }
  
     Tasks.insert({
       text,

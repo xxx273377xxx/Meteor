@@ -34,9 +34,9 @@ Template.body.events({
  
     // Get value from form element
     const target = event.target;
-    <input type="text" name="desc" placeholder="Description" />
-    <input type="date" name="date" />
-    <input  type="submit" value="Add a task">
+    <input type="text" name="desc" placeholder="Description" />;
+	<input type="date" name="date" />;
+	<input  type="submit" value="Add a task">;
  
     // Insert a task into the collection
     Meteor.call('tasks.insert', text, desc, date);
@@ -47,10 +47,10 @@ Template.body.events({
     target.date.value = '';
 	
    Tasks.insert({
-      text,
-      createdAt: new Date(), // current time
-      owner: Meteor.userId(),
-      username: Meteor.user().username,
+    text,
+    createdAt: new Date(), // current time
+    owner: Meteor.userId(),
+    username: Meteor.user().username,
     });
  
     // Clear form
